@@ -3,7 +3,7 @@
   <groupId>com.mycompany.app</groupId>
   <artifactId>my-app</artifactId>
   <packaging>jar</packaging>
-  <version>1.1.0.0.0</version>
+  <version>1.1.0.0.1-SNAPSHOT</version>
   <name>my-app</name>
   <url>http://maven.apache.org</url>
 
@@ -30,7 +30,7 @@
     <connection>scm:git:http://github.com/jjanardh/my-app.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/jjanardh/my-app.git</developerConnection>
     <url>https://github.com/jjanardh/my-app.git</url>
-    <tag>my-app-1.1.0.0.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <dependencies>
