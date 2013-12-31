@@ -3,9 +3,35 @@
   <groupId>com.mycompany.app</groupId>
   <artifactId>my-app</artifactId>
   <packaging>jar</packaging>
-  <version>1.0</version>
+  <version>1.1.0.0.0-SNAPSHOT</version>
   <name>my-app</name>
   <url>http://maven.apache.org</url>
+
+  <distributionManagement>
+   <repository>
+     <id>release-repo</id>
+     <name>release-repo</name>
+     <url>scpexe://127.0.0.1:/var/www/repo/maven</url>
+   </repository>
+  </distributionManagement>
+
+  <build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-ssh-external</artifactId>
+        <version>1.0</version>
+      </extension>
+    </extensions>
+  </build>
+
+
+  <scm>
+    <connection>scm:git:http://github.com/jjanardh/my-app.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/jjanardh/my-app.git</developerConnection>
+    <url>https://github.com/jjanardh/my-app.git</url>
+  </scm>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
